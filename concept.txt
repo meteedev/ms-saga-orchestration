@@ -1,0 +1,6 @@
+
+           ---->                         <--->  /Payments
+Order      (kafka)      Orchestrator
+           <----                         <--->  /Inventorys
+
+

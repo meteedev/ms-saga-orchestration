@@ -1,0 +1,2 @@
+rootProject.name = 'saga-orchestration'
+include ':common-dtos',':order',':inventory', ':payment'  , ':saga'

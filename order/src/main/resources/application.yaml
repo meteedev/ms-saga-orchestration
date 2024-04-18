@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: order
+  jpa:
+    defer-datasource-initialization: true
+  cloud:
+    stream:
+      function:
+        supplier;consumer
+      bindings:
+        supplier-out-0:
+          destination: order-created
+          binder: kafka # Specify Kafka binder for the supplier output
+        consumer-in-0:
+          destination: order-updated
+          binder: kafka # Specify Kafka binder for the consumer input
+      kafka:
+        binder:
+          brokers: localhost:9092 # Specify the Kafka broker address
